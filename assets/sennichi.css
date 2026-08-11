@@ -71,10 +71,11 @@ section{padding-block:80px;}
 .quote-card h2{font:900 36px/1.4 var(--pds-font-ui);margin:8px 0 16px;}
 
 .experience-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch;}
-.experience-card{border:1px solid var(--pds-border);border-radius:14px;background:#fff;overflow:hidden;display:grid;}
-.experience-card:first-child{grid-template-rows:390px auto;}
-.experience-card:last-child{grid-template-rows:280px auto;}
-.experience-copy{padding:24px;}
+.experience-card{border:1px solid var(--pds-border);border-radius:14px;background:#fff;overflow:hidden;display:flex;flex-direction:column;}
+.experience-card>img{flex:0 0 auto;min-height:0;}
+.experience-card:first-child>img{height:390px;}
+.experience-card:last-child>img{height:280px;}
+.experience-copy{position:relative;z-index:1;padding:24px;background:#fff;}
 .experience-copy h3{font:900 26px/1.45 var(--pds-font-ui);margin:0 0 12px;color:var(--sennichi-dark);}
 .experience-copy p{margin:0;}
 .image-label{font-size:14px;color:var(--pds-text-muted);margin-top:8px;}
@@ -161,7 +162,7 @@ footer{background:#0E1022;color:#fff;padding:32px 0;font-size:14px;}
   .section-head{gap:16px;margin-bottom:32px;}
   .intro-image,.bath-image,.facts-photo{min-height:360px;height:420px;}
   .quote-card{margin:-64px 16px 0;padding:24px;}
-  .experience-card:first-child,.experience-card:last-child{grid-template-rows:260px auto;}
+  .experience-card:first-child>img,.experience-card:last-child>img{height:260px;}
   .exercise-stage{min-height:560px;}
   .exercise-copy{padding:24px;}
   .day-flow,.quick-facts,.form-grid{grid-template-columns:1fr;}
