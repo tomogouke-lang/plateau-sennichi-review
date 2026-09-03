@@ -154,6 +154,8 @@ footer{background:#0E1022;color:#fff;padding:32px 0;font-size:14px;}
 }
 
 @media(max-width:620px){
+  body{overflow-wrap:anywhere;}
+  h1,h2,h3{word-break:auto-phrase;overflow-wrap:anywhere;text-wrap:balance;}
   .inner{width:min(100% - 32px,1120px);}
   .hero{min-height:620px;}
   .hero-media::after{background:linear-gradient(0deg,rgba(24,12,19,.93) 0%,rgba(24,12,19,.48) 78%,rgba(24,12,19,.2));}
@@ -166,10 +168,21 @@ footer{background:#0E1022;color:#fff;padding:32px 0;font-size:14px;}
   .exercise-stage{min-height:560px;}
   .exercise-copy{padding:24px;}
   .day-flow,.quick-facts,.form-grid{grid-template-columns:1fr;}
-  .day-step{border-left:0;min-height:auto;}
+  .day-step{border-left:0;min-width:0;min-height:auto;}
   .contact-row{gap:24px;}
   .breakdown li{display:grid;gap:4px;}
   .breakdown b{text-align:left;}
+	#codes{scroll-margin-top:80px;}
+	#codes .availability-wrap{overflow:visible;}
+	#codes .fact-table,#codes .fact-table tbody,#codes .fact-table tr,#codes .fact-table td{display:block;width:100%;}
+	#codes .fact-table thead{display:none;}
+	#codes .fact-table tr{margin-bottom:12px;overflow:hidden;border:1px solid var(--pds-border);border-radius:12px;background:#fff;}
+	#codes .fact-table td{display:grid;grid-template-columns:128px minmax(0,1fr);gap:12px;padding:12px 14px;border:0;border-bottom:1px solid var(--pds-border);}
+	#codes .fact-table td::before{color:var(--pds-primary);font-weight:900;white-space:nowrap;}
+	#codes .fact-table td:nth-child(1)::before{content:"区分";}
+	#codes .fact-table td:nth-child(2)::before{content:"内容";}
+	#codes .fact-table td:nth-child(3)::before{content:"サービスコード";}
+	#codes .fact-table tr:last-child td:not(:last-child){border-bottom:1px solid var(--pds-border);}
 }
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
