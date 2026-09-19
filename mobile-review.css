@@ -1,0 +1,77 @@
+/* Smartphone-only corrections; desktop and printed page layout stay unchanged. */
+.pds-mobile-call{display:none}
+@media screen and (max-width:640px){
+  html{scroll-padding-bottom:calc(112px + env(safe-area-inset-bottom,0px))}
+  h1,h2,h3,p,li,dt,dd,th,td,label{word-break:auto-phrase;overflow-wrap:normal;line-break:strict}
+  h1,h2,h3{text-wrap:balance}
+  .pds-phrase,.pds-number,.pds-word{display:inline-block;text-indent:0;max-width:100%;vertical-align:baseline}
+  .pds-number{white-space:nowrap}
+  a[href^="tel:"]{word-break:normal}
+  .phone{font-size:clamp(24px,7.4vw,32px)!important;white-space:nowrap}
+  .inner,.card,.sim-panel,.sim-form,.result-panel,.sim-result,.form-grid>*,.hero-copy{min-width:0}
+  select{min-width:0;max-width:100%}
+  .btn,.button,button{max-width:100%;height:auto;line-height:1.5;word-break:auto-phrase;overflow-wrap:normal;text-wrap:balance}
+  .availability-table{width:100%!important;min-width:0!important;table-layout:fixed}
+  .availability-table th,.availability-table td{padding:12px 8px!important;overflow-wrap:normal}
+  .availability-table th:first-child,.availability-table td:first-child{width:48px!important}
+  .availability-table th:not(:first-child){width:auto!important}
+  .availability-table .status,.availability-table .badge{max-width:100%;min-width:0;padding-left:4px;padding-right:4px}
+  .pds-stack-table{width:100%!important;min-width:0!important;border:0!important}
+  .pds-stack-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .pds-stack-table tbody,.pds-stack-table tr{display:block;width:100%}
+  .pds-stack-table tbody tr{margin-bottom:16px;border:1px solid var(--line,#ddd);border-radius:8px;overflow:hidden}
+  .pds-stack-table tbody td{display:grid!important;grid-template-columns:minmax(72px,.65fr) minmax(0,1fr);gap:8px;width:100%!important;padding:12px 8px!important;text-align:left!important;border-width:0 0 1px!important;white-space:normal}
+  .pds-stack-table tbody td::before{content:attr(data-mobile-label);font-weight:700;word-break:auto-phrase}
+  .pds-call-page{padding-bottom:calc(104px + env(safe-area-inset-bottom,0px))!important}
+  .pds-mobile-call{display:block;position:fixed;z-index:50;left:0;right:0;bottom:0;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.97);border-top:1px solid var(--line,#ddd)}
+  .pds-mobile-call a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:64px;gap:0;padding:8px 16px;border-radius:8px;background:var(--pds-call-color,#3335BB);color:#fff;text-decoration:none;font:700 18px/1.4 "Noto Sans JP","Hiragino Sans",sans-serif;white-space:nowrap}
+  .pds-mobile-call strong{font-size:24px;line-height:1.3;font-variant-numeric:tabular-nums}
+  .pds-mobile-call a:focus-visible{outline:3px solid #14172b;outline-offset:2px}
+  .mobile-actions{padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+}
+@media print{.pds-mobile-call{display:none!important}}
+
+@media screen and (max-width:640px){.brand small{white-space:nowrap}.contact h2{font-size:26px}.training-copy h2{font-size:26px}}
+
+@media screen and (max-width:640px){.pds-phrase br{display:none}}
+
+@media screen and (max-width:640px){
+ h1:has(.pds-phrase){font-size:28px!important}
+ h2:has(.pds-phrase){font-size:26px!important}
+ h3:has(.pds-phrase){font-size:20px!important}
+ .pds-phrase{white-space:nowrap;max-width:none}
+ .pds-stack-table thead th{display:none}
+}
+@media screen and (min-width:360px) and (max-width:640px){h1:has(.pds-phrase){font-size:32px!important}}
+
+@media screen and (max-width:640px){
+ .pds-phrase,.pds-number,.pds-word{display:inline-block!important;font:inherit!important;color:inherit!important;letter-spacing:inherit!important;text-transform:inherit!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:none!important;box-shadow:none!important;min-width:0!important;min-height:0!important;width:auto!important;height:auto!important}
+}
+
+@media screen and (max-width:640px){.pds-phrase>strong,.pds-phrase>em{display:inline!important}h1:has(.pds-phrase) strong:empty,h2:has(.pds-phrase) strong:empty{display:none!important}}
+
+.pds-cell-value{display:contents}
+@media screen and (max-width:640px){.pds-cell-value{display:block;min-width:0}}
+
+.pds-label-text{display:contents}
+@media screen and (max-width:640px){
+ .pds-label-text{display:block;min-width:0;flex:1}
+ .total{font-size:32px!important;line-height:1.4}
+ .field select,select{appearance:none;-webkit-appearance:none;width:100%;max-width:100%;min-width:0;min-height:48px;padding-right:32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4' fill='none' stroke='%23555B73' stroke-width='2'/%3E%3C/svg%3E");background-position:right 8px center;background-repeat:no-repeat;box-sizing:border-box}
+ .fact-table th{width:112px!important;padding-left:8px!important;padding-right:8px!important}
+ .fact-table td{padding-left:8px!important;padding-right:8px!important}
+}
+
+@media screen and (max-width:640px){.pds-word{white-space:nowrap}}
+
+@media screen and (max-width:640px){select{overflow:hidden;text-overflow:ellipsis}}
+
+.pds-flow-text{display:contents}
+@media screen and (max-width:640px){
+ .pds-flow-text{display:block!important;min-width:0!important;font:inherit!important;color:inherit!important;padding:0!important;margin:0!important;white-space:normal}
+ .availability-table th:first-child,.availability-table td:first-child{width:56px!important}
+}
+
+@media screen and (max-width:640px){.code-table td{grid-template-columns:1fr!important;gap:4px!important}.code-table td::before{white-space:normal!important}}
+
+@media screen and (max-width:640px){#codes td{grid-template-columns:1fr!important;gap:4px!important}#codes td::before{white-space:normal!important}}
